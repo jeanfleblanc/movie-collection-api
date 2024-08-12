@@ -1,0 +1,11 @@
+{
+  "name": "movie-collection-api",
+  "version": "1.0.0",
+  "description": "Allow qerying and returning a list of movies and its metadata",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jean-Francois Leblanc",
+  "license": "ISC"
+}
