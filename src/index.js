@@ -30,14 +30,10 @@ app.get('/docs.json', (req, res) => {
 
 // Error handling and formatting
 app.use((err, req, res, next) => {
-    if (err instanceof CodedError) {
-        res.status(err.statusCode).send({ code: err.code, message: err.message });
-    } else {
-        res.status(500).send({
-            code: 'UNKNOWN_ERROR',
-            message: err.message,
-        });
-    }
+    res.status(500).send({
+        code: 'UNKNOWN_ERROR',
+        message: err.message,
+    });
 });
 
 // Starting up the server!
