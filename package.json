@@ -2,13 +2,23 @@
   "name": "movie-collection-api",
   "version": "1.0.0",
   "description": "Allow qerying and returning a list of movies and its metadata",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+      "dev": "nodemon src/index.js",
+      "test:unit": "jest --config=./testConfig/jest.unit.config.js",
+      "test:performance-load": "artillery run ./artillery/movies.yml -e UAT -o ./artillery/reports/report.json",
+      "start": "node src/index.js"
   },
   "author": "Jean-Francois Leblanc",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13",
+    "artillery": "^2.0.0-4",
+    "jest": "^27.3.1"
   }
 }

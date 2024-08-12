@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "msedge",
+            "name": "Launch my app",
+            "request": "launch",
+            "url": "http://localhost:3000/api/v1/movies"
+        }
+    ]
+}
