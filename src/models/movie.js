@@ -1,10 +1,11 @@
 // date, genre, actors, name, affiche, synopsis, age, cote
 class Movie {
-  constructor(id, name, description, genre) {
+  constructor(id, name, description, genre, actors) {
     this.id = id;
     this.name = name;
     this.description = description;
     this.genre = genre;
+    this.actors = actors;
  }
    
   getId() {
@@ -25,7 +26,10 @@ class Movie {
 }
 
 class Actor {
-
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+ }
 }
 
 module.exports = { Movie, Actor };

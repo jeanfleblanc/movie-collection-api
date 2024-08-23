@@ -1,5 +1,5 @@
 const express = require('express');
-const { Movie, Metadata } = require('../models/movie.js');
+const { Movie, Actor } = require('../models/movie.js');
 const app = express();
 
 app.use(express.json()); // for parsing application/json
@@ -17,8 +17,8 @@ const routes = express.Router();
 routes.get("/movies", (req, res, next) => {
   //  trier par genre, date, cote
 
-  let movie1 = new Movie("1", "Dune", "Spice", "SF")
-  let movie2 = new Movie("2", "Aliens", "The best sequel ever", "SF")
+  let movie1 = new Movie("1", "Dune", "Spice", "SF", [new Actor("1", "Timothée Chalamet")])
+  let movie2 = new Movie("2", "Aliens", "The best sequel ever", "SF", [new Actor("1", "Sigourney Weaver")])
 
   res.json([movie1, movie2]);
 });
