@@ -16,7 +16,11 @@ const routes = express.Router();
  */
 routes.get("/movies", (req, res, next) => {
   //  trier par genre, date, cote
-  res.json({"movie": "Dune"});
+
+  let movie1 = new Movie("1", "Dune", "Spice", "SF")
+  let movie2 = new Movie("2", "Aliens", "The best sequel ever", "SF")
+
+  res.json([movie1, movie2]);
 });
   
 /**
@@ -29,7 +33,7 @@ routes.get("/movies", (req, res, next) => {
  */
 routes.post("/movies", (req, res, next) => {
   const newMovie = new Movie(req.body.message);
-  res.json({"receivedMovie": newMovie.getContent()});
+  res.json({"receivedMovieName": newMovie.getName()});
 });
 
 module.exports = routes;

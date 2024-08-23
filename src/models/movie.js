@@ -1,16 +1,31 @@
 // date, genre, actors, name, affiche, synopsis, age, cote
 class Movie {
-  constructor(content) {
-    this.content = content;
+  constructor(id, name, description, genre) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+    this.genre = genre;
  }
    
-  getContent() {
-    return this.content;
+  getId() {
+    return this.id;
+  }
+
+  getName() {
+    return this.name;
+  }
+
+  getDescription() {
+    return this.description;
+  }
+
+  getGenre() {
+    return this.genre;
   }
 }
 
-class Metadata {
+class Actor {
 
 }
 
-module.exports = { Movie, Metadata };
+module.exports = { Movie, Actor };
