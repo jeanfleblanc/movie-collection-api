@@ -15,6 +15,7 @@ const routes = express.Router();
  *       -  v1
  */
 routes.get("/movies", (req, res, next) => {
+  //  trier par genre, date, cote
   res.json({"movie": "Dune"});
 });
   

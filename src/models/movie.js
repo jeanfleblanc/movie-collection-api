@@ -1,3 +1,4 @@
+// date, genre, actors, name, affiche, synopsis, age, cote
 class Movie {
   constructor(content) {
     this.content = content;
